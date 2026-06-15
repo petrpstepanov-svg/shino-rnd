@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap') layer(base);
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 450px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-black: #0f172a;
+  --color-dark: #0f172a;
+  --color-primary: #22c55e;
+  --color-primary-dark: #16a34a;
+  --color-accent: #0ea5e9;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #0f172a;
+    color: #cbd5e1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background: linear-gradient(135deg, #dc2626, #f97316);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.55);
+    background: linear-gradient(135deg, #b91c1c, #ea580c);
+  }
+
+  .section-pad {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-pad {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* ─── Премиум карточки ─── */
+  .premium-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.08);
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .premium-card:hover {
+    border-color: rgba(34, 197, 94, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ─── Popular pricing ─── */
+  .pricing-popular {
+    border: 2px solid rgba(34, 197, 94, 0.4) !important;
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.12);
+    position: relative;
+  }
+
+  /* ─── Отзыв ─── */
+  .review-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.7));
+    border: 1px solid rgba(148, 163, 184, 0.06);
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .review-card:hover {
+    border-color: rgba(34, 197, 94, 0.2);
+    transform: translateY(-1px);
+  }
+
+  /* ─── Градиентный текст для подзаголовков ─── */
+  .text-gradient-green {
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, #22c55e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Section badge (маленький лейбл над заголовком) ─── */
+  .section-badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  /* ─── Скролл-индикатор для Hero ─── */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    opacity: 0.5;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+}
