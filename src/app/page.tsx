@@ -949,7 +949,7 @@ function FAQSection() {
 /* ─────────── Final CTA ─────────── */
 function FinalCTA() {
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-emergency to-red-700 text-white relative overflow-hidden rounded-t-[2rem] sm:rounded-t-[3rem]">
+    <section className="py-16 sm:py-24 bg-gradient-to-br from-emergency to-red-700 text-white relative overflow-hidden rounded-[2rem] sm:rounded-[3rem] my-6 sm:my-10 mx-2 sm:mx-4 shadow-2xl shadow-emergency/20">
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
@@ -999,7 +999,7 @@ function FinalCTA() {
 /* ─────────── Footer ─────────── */
 function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-8 rounded-t-[1.5rem] sm:rounded-t-[2rem]">
+    <footer className="bg-slate-900 text-slate-400 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
