@@ -133,14 +133,7 @@ function StickyCallBar() {
 
 /* ─────────── Navigation ─────────── */
 function Nav() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handle = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handle, { passive: true });
-    return () => window.removeEventListener("scroll", handle);
-  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -148,13 +141,7 @@ function Nav() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-lg border-b"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
         <div className="flex items-center gap-2">
           <div className="w-9 h-9 rounded-lg bg-brand flex items-center justify-center">
@@ -272,7 +259,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand via-brand-light to-blue-500"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand via-brand-light to-blue-500 rounded-b-[2rem] sm:rounded-b-[3rem]"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -286,11 +273,11 @@ function HeroSection() {
       </div>
 
       {/* Urgent badge */}
-      <div className="absolute top-20 left-0 right-0 flex justify-center z-10">
+      <div className="absolute top-20 left-0 right-0 flex justify-center z-10 px-4">
         <Reveal>
-          <div className="bg-emergency text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2 emergency-pulse shadow-lg shadow-emergency/30">
-            <AlertTriangle className="w-4 h-4" />
-            Пробили колесо? Стоите на обочине? Звоните прямо сейчас!
+          <div className="bg-emergency text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 emergency-pulse shadow-lg shadow-emergency/30 text-center justify-center">
+            <AlertTriangle className="w-4 h-4 flex-shrink-0" />
+            <span>Пробили колесо? Стоите на обочине?<br className="sm:hidden" /> Звоните прямо сейчас!</span>
           </div>
         </Reveal>
       </div>
@@ -803,7 +790,7 @@ function PricesSection() {
 /* ─────────── Trust / Why Us ─────────── */
 function TrustSection() {
   return (
-    <section className="py-16 sm:py-20 bg-brand text-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-brand text-white relative overflow-hidden rounded-[2rem] sm:rounded-[3rem] my-6 sm:my-10 mx-2 sm:mx-4 shadow-2xl shadow-brand/20">
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
@@ -962,7 +949,7 @@ function FAQSection() {
 /* ─────────── Final CTA ─────────── */
 function FinalCTA() {
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-emergency to-red-700 text-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 bg-gradient-to-br from-emergency to-red-700 text-white relative overflow-hidden rounded-t-[2rem] sm:rounded-t-[3rem]">
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
@@ -1012,7 +999,7 @@ function FinalCTA() {
 /* ─────────── Footer ─────────── */
 function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-8">
+    <footer className="bg-slate-900 text-slate-400 py-8 rounded-t-[1.5rem] sm:rounded-t-[2rem]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
