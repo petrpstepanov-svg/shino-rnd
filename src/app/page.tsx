@@ -462,7 +462,17 @@ function PainSection() {
   );
 }
 
-/* ─────────── Services ─────────── */
+/* ─────────── Fade Divider ─────────── */
+/* ─────────── Fade Divider ─────────── */
+function FadeDivider() {
+  return (
+    <div className="w-full">
+      <div className="flex justify-center">
+        <div className="h-[2px] w-4/5 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+      </div>
+    </div>
+  );
+}
 function ServicesSection() {
   return (
     <section id="services" className="py-16 sm:py-20">
@@ -1041,8 +1051,11 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <PainSection />
+        <FadeDivider />
         <ServicesSection />
+        <FadeDivider />
         <HowSection />
+        <FadeDivider />
         <PricesSection />
         <TrustSection />
         <FAQSection />
