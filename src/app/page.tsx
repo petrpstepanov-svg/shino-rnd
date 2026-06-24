@@ -308,8 +308,8 @@ function HeroSection() {
         {/* GIANT call button */}
         <Reveal delay={300}>
           <div className="flex flex-col items-center gap-4 mb-10">
-            <a href={PHONE_HREF} className="group">
-              <Button className="bg-emergency hover:bg-emergency-dark text-white font-black text-xl sm:text-2xl rounded-full px-10 sm:px-14 py-5 sm:py-6 h-auto shadow-2xl shadow-emergency/40 pulse-call relative transition-all group-hover:scale-105">
+            <a href={PHONE_HREF} className="group w-full flex justify-center">
+              <Button className="bg-emergency hover:bg-emergency-dark text-white font-black text-xl sm:text-2xl rounded-full px-6 sm:px-10 md:px-14 py-5 sm:py-6 h-auto shadow-2xl shadow-emergency/40 pulse-call relative transition-all group-hover:scale-105 max-w-[90vw]">
                 {PHONE}
               </Button>
             </a>
@@ -461,9 +461,9 @@ function PainSection() {
         <Reveal delay={300}>
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
-              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20">
+              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20 text-center">
                 <Phone className="size-5" />
-                Звоните — выезжаем через 1 минуту
+                Звоните — быстрый выезд
               </Button>
             </a>
           </div>
@@ -646,11 +646,11 @@ function HowSection() {
         </div>
 
         <Reveal delay={400}>
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 max-w-[90vw] mx-auto">
             <a href={PHONE_HREF}>
-              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20">
+              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-6 sm:px-8 py-5 h-auto shadow-lg shadow-emergency/20 w-full text-center">
                 <Phone className="size-5" />
-                Позвонить — экипаж выедет через минуту
+                Звоните — выезд через минуту
               </Button>
             </a>
           </div>
@@ -921,11 +921,12 @@ function TrustSection() {
         </div>
 
         <Reveal delay={400}>
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 max-w-[90vw] mx-auto">
             <a href={PHONE_HREF}>
-              <Button className="bg-action hover:bg-action-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-action/30">
+              <Button className="bg-action hover:bg-action-dark text-white font-bold text-lg rounded-full px-6 sm:px-8 py-5 h-auto shadow-lg shadow-action/30 w-full text-center">
                 <Phone className="size-5" />
-                Позвонить сейчас — +7 (863) 200-09-09
+                <span className="sm:hidden">Позвонить сейчас</span>
+                <span className="hidden sm:inline">Позвонить сейчас — +7 (863) 200-09-09</span>
               </Button>
             </a>
           </div>
@@ -1038,8 +1039,8 @@ function FinalCTA() {
         </Reveal>
 
         <Reveal delay={100}>
-          <a href={PHONE_HREF} className="inline-block">
-            <Button className="bg-white text-emergency hover:bg-red-50 font-black text-2xl sm:text-3xl rounded-full px-10 sm:px-14 py-5 sm:py-6 h-auto shadow-2xl transition-transform hover:scale-105">
+          <a href={PHONE_HREF} className="inline-block max-w-[90vw]">
+            <Button className="bg-white text-emergency hover:bg-red-50 font-black text-2xl sm:text-3xl rounded-full px-6 sm:px-10 md:px-14 py-5 sm:py-6 h-auto shadow-2xl transition-transform hover:scale-105 w-full">
               <Phone className="size-7 sm:size-8" />
               {PHONE}
             </Button>
@@ -1094,7 +1095,7 @@ function Footer() {
 /* ─────────── Main Page ─────────── */
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
       <Nav />
       <main className="flex-1">
         <HeroSection />
