@@ -115,19 +115,26 @@ function StickyCallBar() {
   }, []);
 
   return (
-    <div className={`sticky-cta ${show ? "visible" : ""}`}>
-      <div className="bg-brand shadow-2xl shadow-brand/30 px-4 py-3 flex items-center justify-between gap-3">
-        <div className="text-white text-sm font-medium hidden sm:block">
-          ШиноМоменто — приедем за 20 минут
-        </div>
-        <a href={PHONE_HREF} className="flex-1 sm:flex-none">
-          <Button className="w-full sm:w-auto bg-emergency hover:bg-emergency-dark text-white font-bold text-base rounded-xl px-6 py-3 h-auto pulse-call relative">
-            <Phone className="w-5 h-5 mr-2" />
-            Позвонить сейчас
+    <>
+      {/* Mobile: full-width pill button */}
+      <div className={`sticky-cta sm:hidden ${show ? "visible" : ""}`}>
+        <a href={PHONE_HREF} className="block">
+          <Button className="w-full bg-emergency hover:bg-emergency-dark text-white font-bold text-base rounded-full px-6 py-3.5 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2">
+            <Phone className="w-5 h-5" />
+            Позвонить
           </Button>
         </a>
       </div>
-    </div>
+      {/* Desktop: wide pill button */}
+      <div className={`sticky-cta-desktop hidden sm:block ${show ? "visible" : ""}`}>
+        <a href={PHONE_HREF}>
+          <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-10 py-4 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2" style={{ width: 800, maxWidth: '90vw' }}>
+            <Phone className="w-5 h-5 mr-2" />
+            Позвонить сейчас — {PHONE}
+          </Button>
+        </a>
+      </div>
+    </>
   );
 }
 
