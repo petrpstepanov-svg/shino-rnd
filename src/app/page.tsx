@@ -309,7 +309,7 @@ function HeroSection() {
         <Reveal delay={300}>
           <div className="flex flex-col items-center gap-4 mb-10">
             <a href={PHONE_HREF} className="group">
-              <Button className="bg-emergency hover:bg-emergency-dark text-white font-black text-xl sm:text-2xl rounded-2xl px-10 sm:px-14 py-7 sm:py-8 h-auto shadow-2xl shadow-emergency/40 pulse-call relative transition-all group-hover:scale-105">
+              <Button className="bg-emergency hover:bg-emergency-dark text-white font-black text-xl sm:text-2xl rounded-full px-10 sm:px-14 py-5 sm:py-6 h-auto shadow-2xl shadow-emergency/40 pulse-call relative transition-all group-hover:scale-105">
                 <Phone className="w-7 h-7 sm:w-8 sm:h-8 mr-3" />
                 {PHONE}
               </Button>
@@ -450,7 +450,7 @@ function PainSection() {
         <Reveal delay={300}>
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
-              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-xl px-8 py-5 h-auto shadow-lg shadow-emergency/20">
+              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20">
                 <Phone className="w-5 h-5 mr-2" />
                 Звоните — выезжаем через 1 минуту
               </Button>
@@ -637,7 +637,7 @@ function HowSection() {
         <Reveal delay={400}>
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
-              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-xl px-8 py-5 h-auto shadow-lg shadow-emergency/20">
+              <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20">
                 <Phone className="w-5 h-5 mr-2" />
                 Позвонить — экипаж выедет через минуту
               </Button>
@@ -788,7 +788,7 @@ function PricesSection() {
         <Reveal delay={400}>
           <div className="text-center mt-8">
             <a href={PHONE_HREF}>
-              <Button className="bg-brand hover:bg-brand-light text-white font-bold text-lg rounded-xl px-8 py-5 h-auto">
+              <Button className="bg-brand hover:bg-brand-light text-white font-bold text-lg rounded-full px-8 py-5 h-auto">
                 <Phone className="w-5 h-5 mr-2" />
                 Узнать точную цену по телефону
               </Button>
@@ -875,7 +875,7 @@ function TrustSection() {
         <Reveal delay={400}>
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
-              <Button className="bg-action hover:bg-action-dark text-white font-bold text-lg rounded-xl px-8 py-5 h-auto shadow-lg shadow-action/30">
+              <Button className="bg-action hover:bg-action-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-action/30">
                 <Phone className="w-5 h-5 mr-2" />
                 Позвонить сейчас — +7 (863) 200-09-09
               </Button>
@@ -991,7 +991,7 @@ function FinalCTA() {
 
         <Reveal delay={100}>
           <a href={PHONE_HREF} className="inline-block">
-            <Button className="bg-white text-emergency hover:bg-red-50 font-black text-2xl sm:text-3xl rounded-2xl px-10 sm:px-14 py-7 sm:py-8 h-auto shadow-2xl transition-transform hover:scale-105">
+            <Button className="bg-white text-emergency hover:bg-red-50 font-black text-2xl sm:text-3xl rounded-full px-10 sm:px-14 py-5 sm:py-6 h-auto shadow-2xl transition-transform hover:scale-105">
               <Phone className="w-7 h-7 sm:w-8 sm:h-8 mr-3" />
               {PHONE}
             </Button>
