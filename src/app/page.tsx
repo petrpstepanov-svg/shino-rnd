@@ -282,14 +282,14 @@ function HeroSection() {
       {/* Urgent badge */}
       <div className="absolute top-20 left-0 right-0 flex justify-center z-10 px-4">
         <Reveal>
-          <div className="bg-emergency text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 emergency-pulse shadow-lg shadow-emergency/30 text-center justify-center">
+          <div className="bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 emergency-pulse shadow-[0_4px_20px_rgba(239,68,68,0.5)] border border-red-400/30 text-center justify-center">
             <AlertTriangle className="w-4 h-4 flex-shrink-0" />
             <span>Пробили колесо? Стоите на обочине?<br className="sm:hidden" /> Звоните прямо сейчас!</span>
           </div>
         </Reveal>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-16 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-36 sm:pt-40 pb-16 text-center">
         <Reveal delay={100}>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
             Выездной шиномонтаж
