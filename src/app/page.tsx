@@ -128,7 +128,7 @@ function StickyCallBar() {
       {/* Desktop: wide pill button */}
       <div className={`sticky-cta-desktop hidden sm:block ${show ? "visible" : ""}`}>
         <a href={PHONE_HREF}>
-          <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-10 py-4 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2" style={{ width: 800, maxWidth: '90vw' }}>
+          <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-10 py-3 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2" style={{ width: 500, maxWidth: '90vw' }}>
             <Phone className="w-5 h-5 mr-2" />
             Позвонить сейчас — {PHONE}
           </Button>
