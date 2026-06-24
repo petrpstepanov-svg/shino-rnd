@@ -119,7 +119,7 @@ function StickyCallBar() {
       {/* Mobile: full-width pill button */}
       <div className={`sticky-cta sm:hidden ${show ? "visible" : ""}`}>
         <a href={PHONE_HREF} className="block">
-          <Button className="w-full bg-emergency hover:bg-emergency-dark text-white font-bold text-base rounded-full px-6 py-3.5 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2">
+          <Button className="w-full bg-brand hover:bg-brand-light text-white font-bold text-base rounded-full px-6 py-3.5 h-auto shadow-xl shadow-brand/40 border border-white/20 flex items-center justify-center gap-2">
             <Phone className="size-5" />
             Позвонить
           </Button>
@@ -128,7 +128,7 @@ function StickyCallBar() {
       {/* Desktop: wide pill button */}
       <div className={`sticky-cta-desktop hidden sm:block ${show ? "visible" : ""}`}>
         <a href={PHONE_HREF}>
-          <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-10 py-3 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2" style={{ width: 500, maxWidth: '90vw' }}>
+          <Button className="bg-brand hover:bg-brand-light text-white font-bold text-lg rounded-full px-10 py-3 h-auto shadow-xl shadow-brand/40 border border-white/20 flex items-center justify-center gap-2" style={{ width: 500, maxWidth: '90vw' }}>
             <Phone className="size-5" />
             Позвонить сейчас — {PHONE}
           </Button>
