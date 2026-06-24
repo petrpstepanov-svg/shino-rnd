@@ -120,7 +120,7 @@ function StickyCallBar() {
       <div className={`sticky-cta sm:hidden ${show ? "visible" : ""}`}>
         <a href={PHONE_HREF} className="block">
           <Button className="w-full bg-emergency hover:bg-emergency-dark text-white font-bold text-base rounded-full px-6 py-3.5 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2">
-            <Phone className="w-5 h-5" />
+            <Phone className="size-5" />
             Позвонить
           </Button>
         </a>
@@ -129,7 +129,7 @@ function StickyCallBar() {
       <div className={`sticky-cta-desktop hidden sm:block ${show ? "visible" : ""}`}>
         <a href={PHONE_HREF}>
           <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-10 py-3 h-auto shadow-2xl shadow-emergency/40 flex items-center justify-center gap-2" style={{ width: 500, maxWidth: '90vw' }}>
-            <Phone className="w-5 h-5 mr-2" />
+            <Phone className="size-5" />
             Позвонить сейчас — {PHONE}
           </Button>
         </a>
@@ -193,12 +193,12 @@ function Nav() {
             href={PHONE_HREF}
             className="hidden sm:flex items-center gap-2 text-brand font-bold text-sm"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="size-4" />
             {PHONE}
           </a>
           <a href={PHONE_HREF}>
             <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-sm rounded-full px-4 sm:px-5 h-9 sm:h-10">
-              <Phone className="w-4 h-4 mr-1 sm:mr-2" />
+              <Phone className="size-4" />
               <span className="hidden sm:inline">Позвонить</span>
               <span className="sm:hidden">Звонок</span>
             </Button>
@@ -251,7 +251,7 @@ function Nav() {
               href={PHONE_HREF}
               className="flex items-center gap-2 text-brand font-bold py-2"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="size-4" />
               {PHONE}
             </a>
           </div>
@@ -310,7 +310,6 @@ function HeroSection() {
           <div className="flex flex-col items-center gap-4 mb-10">
             <a href={PHONE_HREF} className="group">
               <Button className="bg-emergency hover:bg-emergency-dark text-white font-black text-xl sm:text-2xl rounded-full px-10 sm:px-14 py-5 sm:py-6 h-auto shadow-2xl shadow-emergency/40 pulse-call relative transition-all group-hover:scale-105">
-                <Phone className="w-7 h-7 sm:w-8 sm:h-8 mr-3" />
                 {PHONE}
               </Button>
             </a>
@@ -393,7 +392,7 @@ function PainSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <Reveal>
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-black text-foreground">
               Знакомая ситуация?
             </h2>
           </div>
@@ -451,7 +450,7 @@ function PainSection() {
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
               <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20">
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="size-5" />
                 Звоните — выезжаем через 1 минуту
               </Button>
             </a>
@@ -564,7 +563,7 @@ function HowSection() {
       num: "01",
       title: "Звоните нам",
       desc: "Наберите +7 (863) 200-09-09. Диспетчер уточнит адрес и услугу. Занимает 30 секунд.",
-      icon: <Phone className="w-6 h-6" />,
+      icon: <Phone className="size-6" />,
     },
     {
       time: "1 мин",
@@ -638,7 +637,7 @@ function HowSection() {
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
               <Button className="bg-emergency hover:bg-emergency-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-emergency/20">
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="size-5" />
                 Позвонить — экипаж выедет через минуту
               </Button>
             </a>
@@ -789,7 +788,7 @@ function PricesSection() {
           <div className="text-center mt-8">
             <a href={PHONE_HREF}>
               <Button className="bg-brand hover:bg-brand-light text-white font-bold text-lg rounded-full px-8 py-5 h-auto">
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="size-5" />
                 Узнать точную цену по телефону
               </Button>
             </a>
@@ -876,7 +875,7 @@ function TrustSection() {
           <div className="text-center mt-10">
             <a href={PHONE_HREF}>
               <Button className="bg-action hover:bg-action-dark text-white font-bold text-lg rounded-full px-8 py-5 h-auto shadow-lg shadow-action/30">
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="size-5" />
                 Позвонить сейчас — +7 (863) 200-09-09
               </Button>
             </a>
@@ -992,7 +991,7 @@ function FinalCTA() {
         <Reveal delay={100}>
           <a href={PHONE_HREF} className="inline-block">
             <Button className="bg-white text-emergency hover:bg-red-50 font-black text-2xl sm:text-3xl rounded-full px-10 sm:px-14 py-5 sm:py-6 h-auto shadow-2xl transition-transform hover:scale-105">
-              <Phone className="w-7 h-7 sm:w-8 sm:h-8 mr-3" />
+              <Phone className="size-7 sm:size-8" />
               {PHONE}
             </Button>
           </a>
