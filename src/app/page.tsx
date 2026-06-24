@@ -401,45 +401,57 @@ function PainSection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             {
-              emoji: "🔧",
+              image: "/images/pain/vyezdnoy-shinomontazh-shinomomento-24-7-rostov-na-donu-i-oblast.jpg",
               title: "Пробили колесо на трассе",
               desc: "Стоите на обочине, не знаете что делать? Звоните — приедем за 20 минут и всё починим.",
             },
             {
-              emoji: "❄️",
+              image: "/images/pain/shinomontazh-na-kolesah-rostov.jpg",
               title: "Срочно нужна зимняя резина",
               desc: "Первый снег, а вы ещё на летней? Заменим резину с выездом к вам — не нужно никуда ехать.",
             },
             {
-              emoji: "🌙",
+              image: "/images/pain/srochnyy-remont-kolesa-na-vyezde.jpg",
               title: "Прокол ночью — все закрыто",
               desc: "Шиномонтажки не работают, а ехать надо? Мы работаем 24/7, даже в 3 часа ночи.",
             },
             {
               emoji: "🚐",
+              image: "/images/pain/ustanovka-zapaski-na-kommercheskiy-transport-gazel-i-analogi.jpg",
               title: "Газель встала — работа стоит",
               desc: "Коммерческий транспорт — наша специализация. Газель, Sprinter, Crafter — работаем со спаркой.",
             },
             {
               emoji: "🔒",
+              image: "/images/pain/vyezdnoy-shinomontazh-legkovyh-avtomobiley-v-rostove-na-donu.jpg",
               title: "Секретку не открутить",
               desc: "Потеряли ключ от секретных болтов? Снимем без повреждения диска.",
             },
             {
               emoji: "⏰",
+              image: "/images/pain/shinomontazh-s-vyezdom-novocherkassk.jpg",
               title: "Нет времени ехать в сервис",
               desc: "Работа, дети, дела — некогда сидеть в очереди? Приедем к вам домой или в офис.",
             },
           ].map((item, i) => (
             <Reveal key={i} delay={i * 80}>
-              <div className="bg-white rounded-2xl p-5 border shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-3xl mb-3">{item.emoji}</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
+              <div className="bg-white rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition-shadow">
+                {item.image && (
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                  </div>
+                )}
+                {!item.image && (
+                  <div className="text-3xl mb-3 pt-5 px-5">{item.emoji}</div>
+                )}
+                <div className="p-5 pt-3">
+                  <h3 className="text-lg font-bold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -643,6 +655,43 @@ function HowSection() {
             </a>
           </div>
         </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────── Our Work ─────────── */
+function OurWorkSection() {
+  const photos = [
+    { src: "/images/work/nochnoy-vyezdnoy-shinomontazh-shinomomento-23-00-07-00.jpg", alt: "Ночной выездной шиномонтаж" },
+    { src: "/images/work/remont-prokola-shiny-dvoynym-metodom-s-vyezdom.jpg", alt: "Ремонт прокола двойным методом" },
+    { src: "/images/work/mobilnyy-shinomontazh-aksay.jpg", alt: "Мобильный шиномонтаж в Аксае" },
+    { src: "/images/work/mobilnyy-shinomontazh-rostov-na-donu.jpg", alt: "Мобильный шиномонтаж в Ростове" },
+  ];
+
+  return (
+    <section className="py-16 sm:py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <Reveal>
+          <div className="text-center mb-10">
+            <span className="text-brand text-sm font-bold uppercase tracking-widest">
+              Наша работа
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black mt-3 text-foreground">
+              Как это выглядит
+            </h2>
+          </div>
+        </Reveal>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {photos.map((photo, i) => (
+            <Reveal key={i} delay={i * 100}>
+              <div className="aspect-[4/3] rounded-xl overflow-hidden">
+                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" />
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -1054,6 +1103,8 @@ export default function Home() {
         <ServicesSection />
         <FadeDivider />
         <HowSection />
+        <FadeDivider />
+        <OurWorkSection />
         <FadeDivider />
         <PricesSection />
         <TrustSection />
